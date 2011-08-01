@@ -1,0 +1,15 @@
+<div>
+  <!--! ${dropped} -->
+</div>
+
+<div>
+  <!-- ${'not left alone'} -->
+</div>
+
+<div meta:interpolation="true">
+  <!-- ${'not left alone'} -->
+</div>
+
+<div meta:interpolation="false">
+  <!-- ${left alone} -->
+</div>
