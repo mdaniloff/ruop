@@ -1,0 +1,5 @@
+<h1>Helllo!!!</h1>
+
+<li tal:repeat="item result">
+    <a href="/templates/${item.name}">${item.name, item.purpose}</a>
+</li>

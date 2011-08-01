@@ -1,0 +1,5 @@
+<ul>
+<li tal:repeat="item result">
+    <a href="/details/${item.reference}">${item.reference, item.name}</a>
+</li>
+</ul>
