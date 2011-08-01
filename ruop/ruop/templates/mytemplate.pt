@@ -1,5 +1,10 @@
+<h2> Mytemplate.pt </h2>
+
+<form action="" method="get">
 <ul>
-<li tal:repeat="item result">
-    <a href="/details/${item.reference}">${item.reference, item.name}</a>
-</li>
+    <li tal:repeat="record result">
+             <input type="checkbox" name="vehicle_type" value="${record[0]}" tal:attributes="checked record[0] in filters['vehicle_type'] or None" />
+    </li>
 </ul>
+<input type="submit" value="Submit Query" />
+</form>
