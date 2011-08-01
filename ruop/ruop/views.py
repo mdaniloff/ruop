@@ -6,9 +6,9 @@ def my_view(request):
     
     dbsession = DBSession()
     result = dbsession.execute(sa.text("select vehicle_type, count(*) as total_number from appliances group by vehicle_type order by 2"))
-    vehicle_types = request.params.getall('vehicle_type')
+    vehicle_type = request.params.getall('vehicle_type')
     filters = {
-    'vehicle_types': vehicle_types,
+    'vehicle_type': vehicle_type,
     }
     
     return {'result':result, 'filters': filters}
