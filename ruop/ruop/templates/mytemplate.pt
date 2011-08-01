@@ -3,8 +3,9 @@
 <form action="" method="get">
 <ul>
     <li tal:repeat="record result">
-    <input type="checkbox" name="vehicle_type" value="${record[0]}" tal:attributes="checked (record[0] in filters['vehicle_type']) or None" />
+    <input type="checkbox" name="vehicle_type" value="${record[0]}" tal:attributes="checked (record[0] in filters['vehicle_type']) or None" /><strong>${record[0]}</strong> (${record[1]})
     </li>
 </ul>
+
 <input type="submit" value="Submit Query" />
 </form>
